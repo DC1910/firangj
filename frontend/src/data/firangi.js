@@ -23,7 +23,7 @@ export const editorialImages = {
 // CATEGORIES
 // ----------------------------------------------------------------------------
 export const categories = [
-  { slug: "bags", name: "Bags", description: "Structured leather, chain shoulder bags & clutches.", image: U("1605733513597-a8f8341084e6", 900) },
+  { slug: "bags", name: "Bags", description: "Structured leather, chain shoulder bags & clutches.", image: U("1637759292654-a12cb2be085e", 900) },
   { slug: "jewellery", name: "Jewellery", description: "Pearl, gold and statement pieces for close-ups.", image: U("1640083239745-9bbd77a2097f", 900) },
   { slug: "flowers", name: "Flowers & Botanicals", description: "Fresh arrangements, dried stems & sculptural stems.", image: U("1593624212548-d1aaa54d8057", 900) },
   { slug: "sunglasses", name: "Sunglasses", description: "Classic, tortoiseshell & sculptural eyewear.", image: U("1611222777277-61319d63ca94", 900) },
@@ -59,7 +59,7 @@ export const props = [
     id: "fr-001", slug: "vintage-tan-leather-handbag", name: "Vintage Tan Leather Handbag",
     category: "bags",
     description: "A softly patinated tan leather handbag with brushed brass hardware and a structured silhouette. Its warm honey tone reads beautifully against ivory and stone sets.",
-    pricePerDay: 850, images: [U("1605733513597-a8f8341084e6"), U("1705909237050-7a7625b47fac")],
+    pricePerDay: 850, images: [U("1637759292654-a12cb2be085e"), U("1624687943971-e86af76d57de")],
     color: "Tan", material: "Full-grain leather", dimensions: "32 × 24 × 14 cm", condition: "Excellent",
     style: "Vintage", shootTypes: [SHOOT.fashion, SHOOT.editorial, SHOOT.product],
     availability: "available", rentalCount: 46, featured: true, tags: ["leather", "warm", "hero"],
@@ -68,7 +68,7 @@ export const props = [
     id: "fr-002", slug: "gold-chain-shoulder-bag", name: "Gold Chain Shoulder Bag",
     category: "bags",
     description: "A compact quilted shoulder bag finished with a delicate gold chain strap. A refined accent piece for hands and campaign flat-lays.",
-    pricePerDay: 950, images: [U("1705909237050-7a7625b47fac"), U("1605733513597-a8f8341084e6")],
+    pricePerDay: 950, images: [U("1652370737091-7cafd1624f4e"), U("1660216926068-02a71455c417")],
     color: "Ivory / Gold", material: "Quilted leather", dimensions: "22 × 15 × 7 cm", condition: "Like new",
     style: "Contemporary", shootTypes: [SHOOT.fashion, SHOOT.social, SHOOT.editorial],
     availability: "available", rentalCount: 38, featured: true, tags: ["gold", "chain"],
@@ -515,6 +515,7 @@ export const statusMeta = {
   pending: { label: "Pending", tone: "muted" },
   confirmed: { label: "Confirmed", tone: "accent" },
   active: { label: "Active", tone: "gold" },
-  completed: { label: "Completed", tone: "success" },
+  returned: { label: "Returned", tone: "success" },
+  completed: { label: "Returned", tone: "success" },
   cancelled: { label: "Cancelled", tone: "destructive" },
 };

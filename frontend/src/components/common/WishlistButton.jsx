@@ -1,5 +1,6 @@
 import React from "react";
 import { Heart } from "lucide-react";
+import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useWishlist } from "@/context/WishlistContext";
@@ -18,8 +19,9 @@ export const WishlistButton = ({ prop, className, variant = "floating" }) => {
   };
 
   return (
-    <button
+    <motion.button
       type="button"
+      whileTap={{ scale: 0.86 }}
       aria-label={active ? "Remove from wishlist" : "Add to wishlist"}
       aria-pressed={active}
       onClick={handleClick}
@@ -31,12 +33,20 @@ export const WishlistButton = ({ prop, className, variant = "floating" }) => {
         className
       )}
     >
-      <Heart
-        className={cn(
-          "h-4 w-4 transition-all duration-300",
-          active ? "fill-burgundy text-burgundy" : "text-foreground group-hover/wish:text-accent"
-        )}
-      />
-    </button>
+      <motion.span
+        key={active ? "on" : "off"}
+        initial={active ? { scale: 0.6 } : false}
+        animate={active ? { scale: [0.6, 1.25, 1] } : { scale: 1 }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        className="inline-flex"
+      >
+        <Heart
+          className={cn(
+            "h-4 w-4 transition-colors duration-300",
+            active ? "fill-burgundy text-burgundy" : "text-foreground group-hover/wish:text-accent"
+          )}
+        />
+      </motion.span>
+    </motion.button>
   );
 };

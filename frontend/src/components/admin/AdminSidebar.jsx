@@ -1,6 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Package, Grid3x3, ClipboardList, CalendarDays, Users, BarChart3, Settings, ArrowLeft } from "lucide-react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import { LayoutDashboard, Package, Grid3x3, ClipboardList, CalendarDays, Users, BarChart3, Settings, ArrowLeft, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const adminLinks = [
@@ -15,6 +16,12 @@ export const adminLinks = [
 ];
 
 export const AdminSidebar = ({ onNavigate }) => {
+  const navigate = useNavigate();
+  const logout = () => {
+    if (onNavigate) onNavigate();
+    toast("Signed out", { description: "You have been logged out of the admin panel." });
+    navigate("/");
+  };
   return (
     <div className="flex h-full flex-col bg-charcoal text-charcoal-foreground">
       <div className="flex h-[68px] items-center border-b border-charcoal-foreground/12 px-6">
@@ -44,10 +51,21 @@ export const AdminSidebar = ({ onNavigate }) => {
         ))}
       </nav>
 
+      {/* Admin profile + logout */}
       <div className="border-t border-charcoal-foreground/12 p-3">
+        <div className="mb-1 flex items-center gap-3 rounded-sm px-3 py-2.5">
+          <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 font-label text-[0.62rem] text-gold">FS</div>
+          <div className="min-w-0">
+            <p className="truncate text-sm text-charcoal-foreground">Firangi Studio</p>
+            <p className="truncate text-[0.7rem] text-charcoal-foreground/50">admin@firangi.rentals</p>
+          </div>
+        </div>
         <NavLink to="/" onClick={onNavigate} className="flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm text-charcoal-foreground/60 transition-colors hover:text-charcoal-foreground">
           <ArrowLeft className="h-[18px] w-[18px]" strokeWidth={1.6} /> Back to site
         </NavLink>
+        <button onClick={logout} className="flex w-full items-center gap-3 rounded-sm px-3 py-2.5 text-left text-sm text-charcoal-foreground/60 transition-colors hover:text-charcoal-foreground">
+          <LogOut className="h-[18px] w-[18px]" strokeWidth={1.6} /> Logout
+        </button>
       </div>
     </div>
   );
