@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { toast } from "sonner";
 import { ArrowUpRight } from "lucide-react";
 import { categories } from "@/data/firangi";
@@ -71,7 +73,7 @@ export const Footer = () => {
         {/* Middle: link columns */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="font-serif text-xl tracking-[0.18em]">STUDIO FRANGIPANI</Link>
+            <Link href="/" className="font-serif text-xl tracking-[0.18em]">STUDIO FRANGIPANI</Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal-foreground/60">
               A curated prop rental studio for photographers, filmmakers and
               stylists. Objects with character, styled for the frame.
@@ -83,7 +85,7 @@ export const Footer = () => {
               <ul className="mt-5 space-y-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-sm text-charcoal-foreground/80 transition-colors hover:text-charcoal-foreground link-underline">
+                    <Link href={l.to} className="text-sm text-charcoal-foreground/80 transition-colors hover:text-charcoal-foreground link-underline">
                       {l.label}
                     </Link>
                   </li>
@@ -96,7 +98,7 @@ export const Footer = () => {
             <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3">
               {categories.slice(0, 8).map((c) => (
                 <li key={c.slug}>
-                  <Link to={`/explore?category=${c.slug}`} className="text-sm text-charcoal-foreground/80 transition-colors hover:text-charcoal-foreground">
+                  <Link href={`/explore?category=${c.slug}`} className="text-sm text-charcoal-foreground/80 transition-colors hover:text-charcoal-foreground">
                     {c.name}
                   </Link>
                 </li>

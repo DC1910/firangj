@@ -1,11 +1,13 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export const CategoryCard = ({ category, className = "" }) => {
   return (
     <Link
-      to={`/explore?category=${category.slug}`}
+      href={`/explore?category=${category.slug}`}
       className={`group relative block overflow-hidden bg-muted ${className}`}
     >
       <div className="aspect-[3/4] w-full overflow-hidden">

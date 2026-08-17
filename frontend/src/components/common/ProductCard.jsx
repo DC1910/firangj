@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { categoryName, formatINR } from "@/data/firangi";
 import { AvailabilityBadge } from "./AvailabilityBadge";
@@ -14,7 +16,7 @@ export const ProductCard = ({ prop, index = 0 }) => {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (index % 4) * 0.06 }}
       className="group flex flex-col"
     >
-      <Link to={`/product/${prop.id}`} className="block">
+      <Link href={`/product/${prop.id}`} className="block">
         <div className="relative overflow-hidden bg-muted aspect-[4/5]">
           <img
             src={prop.images[0]}
@@ -41,7 +43,7 @@ export const ProductCard = ({ prop, index = 0 }) => {
           <span className="eyebrow text-muted-foreground">{categoryName(prop.category)}</span>
           <AvailabilityBadge status={prop.availability} />
         </div>
-        <Link to={`/product/${prop.id}`}>
+        <Link href={`/product/${prop.id}`}>
           <h3 className="mt-2 font-serif text-xl leading-snug text-foreground transition-colors group-hover:text-accent">
             {prop.name}
           </h3>

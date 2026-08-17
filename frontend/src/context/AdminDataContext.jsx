@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext, useMemo, useState, useCallback } from "react";
 import {
   props as seedProps, rentalRequests as seedRequests, customers as seedCustomers,

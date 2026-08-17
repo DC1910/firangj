@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  STUDIO FRANGIPANI — Premium Prop Rental Studio
+  Design language: warm editorial. Ivory & cream canvas, warm charcoal ink,
+  beige & taupe neutrals, muted brown accent, restrained burgundy.
+  All tokens in HSL space-separated format.
+*/
+
+@layer base {
+    :root {
+        /* Core canvas */
+        --background: 40 33% 97%;        /* warm ivory */
+        --foreground: 28 12% 14%;        /* warm charcoal ink */
+
+        --card: 40 30% 98%;              /* soft cream surface */
+        --card-foreground: 28 12% 14%;
+
+        --popover: 40 33% 97%;
+        --popover-foreground: 28 12% 14%;
+
+        /* Charcoal near-black for primary actions */
+        --primary: 28 14% 12%;
+        --primary-foreground: 40 33% 97%;
+
+        /* Beige */
+        --secondary: 36 26% 90%;
+        --secondary-foreground: 28 14% 18%;
+
+        /* Muted taupe surfaces + text */
+        --muted: 36 22% 92%;
+        --muted-foreground: 30 8% 44%;
+
+        /* Muted brown accent */
+        --accent: 28 26% 34%;
+        --accent-foreground: 40 33% 97%;
+
+        --destructive: 4 52% 42%;
+        --destructive-foreground: 40 33% 97%;
+
+        /* Hairline rules */
+        --border: 34 16% 85%;
+        --input: 34 16% 85%;
+        --ring: 28 26% 34%;
+
+        /* Editorial extras */
+        --charcoal: 28 13% 11%;          /* dark bands / footer */
+        --charcoal-foreground: 40 30% 94%;
+        --taupe: 32 14% 58%;
+        --cream: 38 34% 95%;
+        --sand: 36 30% 88%;
+        --burgundy: 356 36% 30%;         /* restrained accent only */
+        --gold: 36 42% 52%;
+
+        /* Charts (analytics) — warm editorial palette */
+        --chart-1: 28 26% 34%;
+        --chart-2: 36 42% 52%;
+        --chart-3: 32 14% 58%;
+        --chart-4: 356 36% 40%;
+        --chart-5: 28 14% 20%;
+
+        --shadow-elegant: 0 24px 60px -28px hsl(28 20% 20% / 0.28);
+        --shadow-soft: 0 12px 32px -20px hsl(28 20% 20% / 0.22);
+        --transition-editorial: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+        --radius: 0.125rem;
+    }
+
+    /* App is light-only per brief; keep .dark mapped to same warm system. */
+    .dark {
+        --background: 40 33% 97%;
+        --foreground: 28 12% 14%;
+        --card: 40 30% 98%;
+        --card-foreground: 28 12% 14%;
+        --popover: 40 33% 97%;
+        --popover-foreground: 28 12% 14%;
+        --primary: 28 14% 12%;
+        --primary-foreground: 40 33% 97%;
+        --secondary: 36 26% 90%;
+        --secondary-foreground: 28 14% 18%;
+        --muted: 36 22% 92%;
+        --muted-foreground: 30 8% 44%;
+        --accent: 28 26% 34%;
+        --accent-foreground: 40 33% 97%;
+        --destructive: 4 52% 42%;
+        --destructive-foreground: 40 33% 97%;
+        --border: 34 16% 85%;
+        --input: 34 16% 85%;
+        --ring: 28 26% 34%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "kern", "liga";
+    }
+    h1, h2, h3, h4, h5 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+    ::selection {
+        background: hsl(var(--accent) / 0.9);
+        color: hsl(var(--accent-foreground));
+    }
+}
+
+@layer components {
+    /* Editorial uppercase micro-label */
+    .eyebrow {
+        font-family: 'Jost', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.28em;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+    .font-label {
+        font-family: 'Jost', sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+    }
+    /* Fine hairline underline reveal for links */
+    .link-underline {
+        position: relative;
+    }
+    .link-underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 1px;
+        width: 100%;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform var(--transition-editorial);
+    }
+    .link-underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    /* Subtle paper grain overlay */
+    .grain::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .editorial-img {
+        filter: saturate(0.92) contrast(1.02);
+    }
+}
+
+@layer utilities {
+    .animate-fade-up {
+        animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .animate-fade-in {
+        animation: fadeIn 1s ease both;
+    }
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .marquee-track {
+        animation: marquee 32s linear infinite;
+    }
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
+
+/* Hide Next.js development indicator overlay */
+nextjs-portal,
+[data-nextjs-toast-wrapper],
+[data-nextjs-dev-overlay] {
+    display: none !important;
+}
+

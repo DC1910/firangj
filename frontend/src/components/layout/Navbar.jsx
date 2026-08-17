@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Heart, Menu, Search, ClipboardList } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -21,7 +24,7 @@ export const Navbar = () => {
   const { count: requestCount } = useRequest();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -30,10 +33,11 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isHome = location.pathname === "/";
+  const isHome = pathname === "/";
   const transparent = isHome && !scrolled;
 
-  const linkClass = "font-label text-[0.7rem] tracking-[0.15em] text-foreground/75 transition-colors hover:text-foreground link-underline";
+  const linkClass =
+    "font-label text-[0.7rem] tracking-[0.15em] text-foreground/75 transition-colors hover:text-foreground link-underline";
 
   return (
     <>
@@ -56,37 +60,30 @@ export const Navbar = () => {
             >
               <Menu className="h-5 w-5" />
             </button>
-            <Link to="/" className="font-serif text-xl tracking-[0.18em] text-foreground sm:text-2xl">
+            <Link href="/" className="font-serif text-xl tracking-[0.18em] text-foreground sm:text-2xl">
               STUDIO FRANGIPANI
             </Link>
           </div>
 
           {/* Center: nav links */}
           <nav className="hidden items-center gap-7 lg:flex">
-            {links.map((l) =>
-              l.hash ? (
-                <Link key={l.label} to={l.to} className={linkClass}>
-                  {l.label.toUpperCase()}
-                </Link>
-              ) : (
-                <NavLink
-                  key={l.label}
-                  to={l.to}
-                  end={l.end}
-                  className={({ isActive }) => cn(linkClass, isActive && "text-accent")}
-                >
-                  {l.label.toUpperCase()}
-                </NavLink>
-              )
-            )}
+            {links.map((l) => (
+              <Link
+                key={l.label}
+                href={l.to}
+                className={cn(linkClass, !l.hash && pathname === l.to && "text-accent")}
+              >
+                {l.label.toUpperCase()}
+              </Link>
+            ))}
           </nav>
 
           {/* Right: actions */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link to="/explore" aria-label="Search" className="hidden text-foreground transition-colors hover:text-accent sm:inline-flex">
+            <Link href="/explore" aria-label="Search" className="hidden text-foreground transition-colors hover:text-accent sm:inline-flex">
               <Search className="h-[18px] w-[18px]" strokeWidth={1.6} />
             </Link>
-            <Link to="/wishlist" aria-label="Wishlist" className="relative text-foreground transition-colors hover:text-accent">
+            <Link href="/wishlist" aria-label="Wishlist" className="relative text-foreground transition-colors hover:text-accent">
               <Heart className="h-[18px] w-[18px]" strokeWidth={1.6} />
               {count > 0 && (
                 <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-burgundy px-1 text-[0.6rem] font-medium text-charcoal-foreground">
@@ -94,7 +91,7 @@ export const Navbar = () => {
                 </span>
               )}
             </Link>
-            <Link to="/rental-request" aria-label="Rental request" className="relative text-foreground transition-colors hover:text-accent">
+            <Link href="/rental-request" aria-label="Rental request" className="relative text-foreground transition-colors hover:text-accent">
               <ClipboardList className="h-[18px] w-[18px]" strokeWidth={1.6} />
               {requestCount > 0 && (
                 <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[0.6rem] font-medium text-accent-foreground">
@@ -103,7 +100,7 @@ export const Navbar = () => {
               )}
             </Link>
             <Button asChild variant="editorial" size="sm" className="hidden md:inline-flex">
-              <Link to="/explore">Explore Props</Link>
+              <Link href="/explore">Explore Props</Link>
             </Button>
           </div>
         </div>
