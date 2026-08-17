@@ -16,16 +16,16 @@ import {
 
 const catImg = (slug) => categories.find((c) => c.slug === slug)?.image;
 
-// Featured homepage categories (display names mapped to existing dataset slugs)
+// Featured homepage categories (display names mapped to new dataset slugs)
 const featuredCategories = [
-  { name: "Bags", slug: "bags", description: "Structured leather & chain shoulder bags." },
-  { name: "Jewellery", slug: "jewellery", description: "Pearl, gold & statement pieces." },
-  { name: "Flowers & Botanicals", slug: "flowers", description: "Fresh, dried & sculptural stems." },
-  { name: "Fashion Accessories", slug: "sunglasses", description: "Eyewear, scarves & finishing touches." },
-  { name: "Tabletop", slug: "tableware", description: "Ceramic sets, glassware & serving pieces." },
-  { name: "Books & Stationery", slug: "books", description: "Vintage hardcovers & coffee-table stacks." },
-  { name: "Furniture", slug: "furniture", description: "Accent chairs, side tables & stools." },
-  { name: "Decorative Objects", slug: "decor", description: "Candlesticks, sculptures & lifestyle pieces." },
+  { name: "Tableware & Serving",               slug: "tableware-serving",  description: "Bowls, cake stands, cups, plates & platters." },
+  { name: "Glassware & Drinkware",             slug: "glassware",          description: "Bottles, drinking glasses, jars & perfume bottles." },
+  { name: "Decorative Objects & Display",      slug: "decorative-objects", description: "Vases, frames, mirrors, prisms & vintage pieces." },
+  { name: "Metal Objects",                     slug: "metal-objects",      description: "Brass, copper & silver props for any shoot." },
+  { name: "Marble, Stone & Natural Materials", slug: "marble-stone",       description: "Marble props, stones & wooden boards." },
+  { name: "Jewellery & Fashion Display",       slug: "jewellery-fashion",  description: "Jewellery display stands & boxes." },
+  { name: "Themed / Special Props",            slug: "themed-props",       description: "Party, pooja, school, sea/ocean & more." },
+  { name: "Product Shoot Essentials",          slug: "product-shoot",      description: "Backgrounds, textures, risers & acrylic blocks." },
 ].map((c) => ({ ...c, image: catImg(c.slug) }));
 
 const steps = [
@@ -60,7 +60,7 @@ export default function Home() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="eyebrow text-accent"
             >
-              The Firangi Prop Library
+              The Studio Frangipani Prop Library
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function Home() {
               Props, styled for the shoot.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-charcoal-foreground/65">
-              A glimpse of the Firangi library at work across editorials, campaigns
+              A glimpse of the Studio Frangipani library at work across editorials, campaigns
               and lifestyle sets.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: (i % 4) * 0.05 }}
                 className={`group relative overflow-hidden ${img.span}`}
               >
-                <img src={img.src} alt="Firangi styled prop" loading="lazy" className="editorial-img h-full w-full object-cover transition-transform duration-[900ms] ease-editorial group-hover:scale-[1.06]" />
+                <img src={img.src} alt="Studio Frangipani styled prop" loading="lazy" className="editorial-img h-full w-full object-cover transition-transform duration-[900ms] ease-editorial group-hover:scale-[1.06]" />
                 <div className="absolute inset-0 bg-charcoal/0 transition-colors duration-500 group-hover:bg-charcoal/20" />
               </motion.div>
             ))}

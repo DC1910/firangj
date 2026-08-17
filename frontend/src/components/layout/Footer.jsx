@@ -17,7 +17,7 @@ const columns = [
   {
     title: "Studio",
     links: [
-      { label: "About Firangi", to: "/about" },
+      { label: "About Studio Frangipani", to: "/about" },
       { label: "Contact", to: "/contact" },
       { label: "Admin", to: "/admin" },
     ],
@@ -30,7 +30,7 @@ export const Footer = () => {
   const onSubscribe = (e) => {
     e.preventDefault();
     if (!email.trim()) return;
-    toast("Thank you for subscribing", { description: "Look out for the next Firangi edit." });
+    toast("Thank you for subscribing", { description: "Look out for the next Studio Frangipani edit." });
     setEmail("");
   };
 
@@ -45,7 +45,7 @@ export const Footer = () => {
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-charcoal-foreground/70">
               Join our list for new arrivals, styling notes and behind-the-scenes
-              from the Firangi library.
+              from the Studio Frangipani library.
             </p>
           </div>
           <div className="flex items-end">
@@ -71,7 +71,7 @@ export const Footer = () => {
         {/* Middle: link columns */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="font-serif text-2xl tracking-[0.22em]">FIRANGI</Link>
+            <Link to="/" className="font-serif text-xl tracking-[0.18em]">STUDIO FRANGIPANI</Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal-foreground/60">
               A curated prop rental studio for photographers, filmmakers and
               stylists. Objects with character, styled for the frame.
@@ -108,7 +108,7 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="flex flex-col items-start justify-between gap-4 border-t border-charcoal-foreground/15 pt-8 sm:flex-row sm:items-center">
           <p className="text-xs text-charcoal-foreground/50">
-            © {new Date().getFullYear()} Firangi Studio. A prototype for demonstration.
+            © {new Date().getFullYear()} Studio Frangipani. A prototype for demonstration.
           </p>
           <div className="flex items-center gap-6">
             {["Instagram", "Pinterest", "Behance"].map((s) => (

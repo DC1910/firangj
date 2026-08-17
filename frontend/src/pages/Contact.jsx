@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import { editorialImages, allShootTypes } from "@/data/firangi";
 
 const details = [
-  { icon: Mail, label: "Email", value: "studio@firangi.rentals" },
+  { icon: Mail, label: "Email", value: "studio@studiofrangipani.rentals" },
   { icon: Phone, label: "Phone", value: "+91 98200 40040" },
   { icon: MapPin, label: "Location", value: "14 Atelier Lane, Bandra West, Mumbai 400050" },
   { icon: Clock, label: "Business hours", value: "Mon–Sat, 10am – 7pm IST" },
@@ -59,7 +59,7 @@ export default function Contact() {
                 <span className="eyebrow mt-7 text-accent">Enquiry sent</span>
                 <h2 className="mt-3 font-serif text-4xl text-foreground">Thank you for reaching out.</h2>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  We&rsquo;ve received your enquiry and a member of the Firangi team will
+                  We&rsquo;ve received your enquiry and a member of the Studio Frangipani team will
                   be in touch within one business day.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
@@ -91,7 +91,7 @@ export default function Contact() {
           {/* Info */}
           <div className="order-1 lg:order-2">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={editorialImages.neutralProps} alt="Firangi studio" className="editorial-img h-full w-full object-cover" />
+              <img src={editorialImages.neutralProps} alt="Studio Frangipani studio" className="editorial-img h-full w-full object-cover" />
             </div>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {details.map((d) => (

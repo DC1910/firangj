@@ -10,8 +10,8 @@ export const MobileNav = ({ open, onClose, links }) => {
       <SheetContent side="left" className="w-[86%] max-w-sm border-r border-border bg-background p-0">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-border px-6 py-5">
-            <Link to="/" onClick={onClose} className="font-serif text-xl tracking-[0.2em] text-foreground">
-              FIRANGI
+            <Link to="/" onClick={onClose} className="font-serif text-lg tracking-[0.18em] text-foreground">
+              STUDIO FRANGIPANI
             </Link>
             <button aria-label="Close menu" onClick={onClose} className="text-foreground">
               <X className="h-5 w-5" />

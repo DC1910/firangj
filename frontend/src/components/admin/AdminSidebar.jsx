@@ -25,7 +25,7 @@ export const AdminSidebar = ({ onNavigate }) => {
   return (
     <div className="flex h-full flex-col bg-charcoal text-charcoal-foreground">
       <div className="flex h-[68px] items-center border-b border-charcoal-foreground/12 px-6">
-        <NavLink to="/" className="font-serif text-xl tracking-[0.2em]">FIRANGI</NavLink>
+        <NavLink to="/" className="font-serif text-base tracking-[0.16em]">STUDIO FRANGIPANI</NavLink>
         <span className="ml-2 font-label text-[0.55rem] tracking-[0.14em] text-gold">ADMIN</span>
       </div>
 
@@ -54,10 +54,10 @@ export const AdminSidebar = ({ onNavigate }) => {
       {/* Admin profile + logout */}
       <div className="border-t border-charcoal-foreground/12 p-3">
         <div className="mb-1 flex items-center gap-3 rounded-sm px-3 py-2.5">
-          <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 font-label text-[0.62rem] text-gold">FS</div>
+          <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 font-label text-[0.62rem] text-gold">SF</div>
           <div className="min-w-0">
-            <p className="truncate text-sm text-charcoal-foreground">Firangi Studio</p>
-            <p className="truncate text-[0.7rem] text-charcoal-foreground/50">admin@firangi.rentals</p>
+            <p className="truncate text-sm text-charcoal-foreground">Studio Frangipani</p>
+            <p className="truncate text-[0.7rem] text-charcoal-foreground/50">admin@studiofrangipani.rentals</p>
           </div>
         </div>
         <NavLink to="/" onClick={onNavigate} className="flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm text-charcoal-foreground/60 transition-colors hover:text-charcoal-foreground">

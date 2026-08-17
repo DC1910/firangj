@@ -33,7 +33,7 @@ export default function HowItWorks() {
             From first browse to final frame.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Renting from Firangi is designed to be effortless — so you can spend
+            Renting from Studio Frangipani is designed to be effortless — so you can spend
             your energy on the shoot, not the logistics.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function HowItWorks() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={editorialImages.studio} alt="Firangi styling studio" className="editorial-img h-full w-full object-cover" />
+              <img src={editorialImages.studio} alt="Studio Frangipani styling studio" className="editorial-img h-full w-full object-cover" />
             </div>
           </div>
           <div className="space-y-px overflow-hidden border border-border">

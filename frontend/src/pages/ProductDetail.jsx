@@ -249,7 +249,7 @@ export default function ProductDetail() {
               <AccordionItem value="delivery" className="border-border">
                 <AccordionTrigger className="font-label text-xs tracking-[0.14em]">DELIVERY &amp; PICKUP</AccordionTrigger>
                 <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  Studio delivery available across the city with 48-hour notice. Self-pickup from the Firangi studio is complimentary.
+                  Studio delivery available across the city with 48-hour notice. Self-pickup from the Studio Frangipani studio is complimentary.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

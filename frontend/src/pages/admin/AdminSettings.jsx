@@ -32,8 +32,8 @@ export default function AdminSettings() {
           <h3 className="font-serif text-2xl text-foreground">Studio profile</h3>
           <p className="text-xs text-muted-foreground">Public details shown across the site.</p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
-            <div className="flex flex-col gap-2"><Label className="eyebrow text-foreground">Studio name</Label><Input defaultValue="Firangi" className="h-11 rounded-sm" /></div>
-            <div className="flex flex-col gap-2"><Label className="eyebrow text-foreground">Contact email</Label><Input defaultValue="studio@firangi.rentals" className="h-11 rounded-sm" /></div>
+            <div className="flex flex-col gap-2"><Label className="eyebrow text-foreground">Studio name</Label><Input defaultValue="Studio Frangipani" className="h-11 rounded-sm" /></div>
+            <div className="flex flex-col gap-2"><Label className="eyebrow text-foreground">Contact email</Label><Input defaultValue="studio@studiofrangipani.rentals" className="h-11 rounded-sm" /></div>
             <div className="flex flex-col gap-2 sm:col-span-2"><Label className="eyebrow text-foreground">Studio address</Label><Textarea defaultValue="14 Atelier Lane, Bandra West, Mumbai 400050" rows={2} className="rounded-sm resize-none" /></div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-// FIRANGI — centralized mock dataset (frontend-only prototype)
+// STUDIO FRANGIPANI — centralized mock dataset (frontend-only prototype)
 // All data is static/mock. No backend.
 
 const U = (id, w = 1400) =>
@@ -23,18 +23,17 @@ export const editorialImages = {
 // CATEGORIES
 // ----------------------------------------------------------------------------
 export const categories = [
-  { slug: "bags", name: "Bags", description: "Structured leather, chain shoulder bags & clutches.", image: U("1637759292654-a12cb2be085e", 900) },
-  { slug: "jewellery", name: "Jewellery", description: "Pearl, gold and statement pieces for close-ups.", image: U("1640083239745-9bbd77a2097f", 900) },
-  { slug: "flowers", name: "Flowers & Botanicals", description: "Fresh arrangements, dried stems & sculptural stems.", image: U("1593624212548-d1aaa54d8057", 900) },
-  { slug: "sunglasses", name: "Sunglasses", description: "Classic, tortoiseshell & sculptural eyewear.", image: U("1611222777277-61319d63ca94", 900) },
-  { slug: "shoes", name: "Shoes", description: "Heels and sculptural footwear for editorials.", image: U("1535043934128-cf0b28d52f95", 900) },
-  { slug: "books", name: "Books & Stationery", description: "Vintage hardcovers and coffee-table stacks.", image: U("1595123336219-5eedd543bc4a", 900) },
-  { slug: "tableware", name: "Tableware", description: "Ceramic dinner sets, glassware & flatware.", image: U("1740478949628-ff562c3c3923", 900) },
-  { slug: "furniture", name: "Furniture", description: "Accent chairs, side tables & stools.", image: U("1581539250439-c96689b516dd", 900) },
-  { slug: "vases", name: "Vases", description: "Ribbed glass, sculptural ceramic & stoneware.", image: U("1631125915902-d8abe9225ff2", 900) },
-  { slug: "mirrors", name: "Mirrors", description: "Antique gold and round decorative mirrors.", image: U("1612392549386-b6969764af6f", 900) },
-  { slug: "trays", name: "Trays", description: "Marble, brass and lacquer styling trays.", image: U("1634731206404-2a4b1e1120d9", 900) },
-  { slug: "decor", name: "Decorative Objects", description: "Candlesticks, sculptures & lifestyle pieces.", image: U("1556893289-5ccc75ebd2bf", 900) },
+  { slug: "tableware-serving",  name: "Tableware & Serving",               description: "Bowls, cake stands, cups, plates, platters, spoons, table mats & trays.",       image: "/images/categories/tableware-serving.jpg" },
+  { slug: "glassware",          name: "Glassware & Drinkware",             description: "Bottles, drinking glasses, glass props, jars & perfume bottles.",              image: "/images/categories/glassware.jpg" },
+  { slug: "decorative-objects", name: "Decorative Objects & Display",      description: "Decor articles, fake fruits, frames, mirrors, prisms, vases & vintage pieces.", image: "/images/categories/decorative-objects.jpg" },
+  { slug: "metal-objects",      name: "Metal Objects",                     description: "Brass, copper & silver props for editorial and product shoots.",               image: "/images/categories/metal-objects.jpg" },
+  { slug: "marble-stone",       name: "Marble, Stone & Natural Materials", description: "Marble props, stones, wooden bark, wooden boards & wooden boxes.",            image: "/images/categories/marble-stone.jpg" },
+  { slug: "wood-storage",       name: "Wood & Storage / Containers",       description: "Baskets, bags, gift boxes, jewellery boxes & organisers.",                   image: "/images/categories/wood-storage.jpg" },
+  { slug: "jewellery-fashion",  name: "Jewellery & Fashion Display",       description: "Jewellery display stands & jewellery boxes for product photography.",        image: "/images/categories/jewellery-fashion.jpg" },
+  { slug: "themed-props",       name: "Themed / Special Props",            description: "Christmas, party, pooja, school, science, sea/ocean, fitness & games props.", image: "/images/categories/themed-props.jpg" },
+  { slug: "lighting-candles",   name: "Lighting & Candle Accessories",     description: "Lights and candle stands for atmospheric and mood photography.",           image: "/images/categories/lighting-candles.jpg" },
+  { slug: "kitchen-culinary",   name: "Kitchen / Culinary Props",          description: "Mortar & pestle, teapots and culinary prop essentials.",                   image: "/images/categories/kitchen-culinary.jpg" },
+  { slug: "product-shoot",      name: "Product Shoot Essentials",          description: "Backgrounds, textures, acrylic shapes, ice cubes, risers & acrylic blocks.", image: "/images/categories/product-shoot.jpg" },
 ];
 
 export const categoryName = (slug) =>
@@ -57,7 +56,7 @@ const SHOOT = {
 export const props = [
   {
     id: "fr-001", slug: "vintage-tan-leather-handbag", name: "Vintage Tan Leather Handbag",
-    category: "bags",
+    category: "wood-storage",
     description: "A softly patinated tan leather handbag with brushed brass hardware and a structured silhouette. Its warm honey tone reads beautifully against ivory and stone sets.",
     pricePerDay: 850, images: [U("1637759292654-a12cb2be085e"), U("1624687943971-e86af76d57de")],
     color: "Tan", material: "Full-grain leather", dimensions: "32 × 24 × 14 cm", condition: "Excellent",
@@ -66,7 +65,7 @@ export const props = [
   },
   {
     id: "fr-002", slug: "gold-chain-shoulder-bag", name: "Gold Chain Shoulder Bag",
-    category: "bags",
+    category: "wood-storage",
     description: "A compact quilted shoulder bag finished with a delicate gold chain strap. A refined accent piece for hands and campaign flat-lays.",
     pricePerDay: 950, images: [U("1652370737091-7cafd1624f4e"), U("1660216926068-02a71455c417")],
     color: "Ivory / Gold", material: "Quilted leather", dimensions: "22 × 15 × 7 cm", condition: "Like new",
@@ -75,7 +74,7 @@ export const props = [
   },
   {
     id: "fr-003", slug: "pearl-statement-necklace", name: "Pearl Statement Necklace",
-    category: "jewellery",
+    category: "jewellery-fashion",
     description: "An oversized baroque pearl necklace strung on a fine gold clasp. Catches soft light for luminous jewellery close-ups.",
     pricePerDay: 650, images: [U("1640083239745-9bbd77a2097f"), U("1654699991520-aaaf4dd2608b")],
     color: "Pearl white", material: "Baroque pearl, gold-plate", dimensions: "45 cm strand", condition: "Excellent",
@@ -84,7 +83,7 @@ export const props = [
   },
   {
     id: "fr-004", slug: "layered-gold-chain-set", name: "Layered Gold Chain Set",
-    category: "jewellery",
+    category: "jewellery-fashion",
     description: "A curated trio of fine gold chains in graduated lengths, ideal for layered neckline styling and detail shots.",
     pricePerDay: 550, images: [U("1633934542430-0905ccb5f050"), U("1602173574767-37ac01994b2a")],
     color: "Gold", material: "Gold-plated brass", dimensions: "40–55 cm", condition: "Like new",
@@ -93,7 +92,7 @@ export const props = [
   },
   {
     id: "fr-005", slug: "pearl-drop-earrings", name: "Pearl Drop Earrings",
-    category: "jewellery",
+    category: "jewellery-fashion",
     description: "Elegant freshwater pearl drops on slender gold hooks. A delicate finishing accent for beauty and portrait work.",
     pricePerDay: 450, images: [U("1654699991520-aaaf4dd2608b"), U("1515562141207-7a88fb7ce338")],
     color: "Pearl / Gold", material: "Freshwater pearl", dimensions: "4 cm drop", condition: "Excellent",
@@ -102,7 +101,7 @@ export const props = [
   },
   {
     id: "fr-006", slug: "gold-cuff-bracelet", name: "Sculptural Gold Cuff",
-    category: "jewellery",
+    category: "metal-objects",
     description: "A weighty, hand-finished gold cuff with an organic sculptural curve. Reads as a hero accessory in monochrome sets.",
     pricePerDay: 600, images: [U("1602173574767-37ac01994b2a"), U("1633934542430-0905ccb5f050")],
     color: "Gold", material: "Brushed brass", dimensions: "6 cm wide", condition: "Excellent",
@@ -111,7 +110,7 @@ export const props = [
   },
   {
     id: "fr-007", slug: "white-hydrangea-arrangement", name: "White Hydrangea Arrangement",
-    category: "flowers",
+    category: "themed-props",
     description: "A full, cloud-like arrangement of white hydrangea in a clear glass vessel. Refreshed per booking for lush lifestyle scenes.",
     pricePerDay: 1200, images: [U("1593624212548-d1aaa54d8057"), U("1560256608-43f0b6f7588e")],
     color: "White", material: "Fresh florals, glass", dimensions: "40 × 35 cm", condition: "Fresh per booking",
@@ -120,7 +119,7 @@ export const props = [
   },
   {
     id: "fr-008", slug: "dried-pampas-bouquet", name: "Dried Pampas Grass Bouquet",
-    category: "flowers",
+    category: "decorative-objects",
     description: "Tall, feathery pampas plumes in a warm wheat tone. Long-lasting texture for neutral and boho-editorial styling.",
     pricePerDay: 700, images: [U("1570451488142-71d08e1511e3"), U("1550711147-019468d5350a")],
     color: "Wheat", material: "Dried pampas", dimensions: "90 cm stems", condition: "Excellent",
@@ -129,7 +128,7 @@ export const props = [
   },
   {
     id: "fr-009", slug: "fresh-peony-vase", name: "Blush Peony Arrangement",
-    category: "flowers",
+    category: "themed-props",
     description: "Soft blush peonies arranged loosely in a clear glass vase. A romantic hero for beauty and bridal campaigns.",
     pricePerDay: 1500, images: [U("1575178114667-c8a832c61f45"), U("1575178094668-132dc931ad35")],
     color: "Blush pink", material: "Fresh florals, glass", dimensions: "38 × 30 cm", condition: "Fresh per booking",
@@ -138,7 +137,7 @@ export const props = [
   },
   {
     id: "fr-010", slug: "dried-botanical-still-life", name: "Dried Botanical Cluster",
-    category: "flowers",
+    category: "decorative-objects",
     description: "A muted cluster of dried stems and seed heads in dusty lavender and taupe. Adds quiet texture to flat-lays.",
     pricePerDay: 500, images: [U("1586244897859-2cd81e1cad1f"), U("1706641248702-6ff0a3d2812d")],
     color: "Dusty lavender", material: "Dried botanicals", dimensions: "45 cm", condition: "Excellent",
@@ -147,7 +146,7 @@ export const props = [
   },
   {
     id: "fr-011", slug: "classic-black-sunglasses", name: "Classic Black Sunglasses",
-    category: "sunglasses",
+    category: "themed-props",
     description: "Timeless black acetate frames with a subtle keyhole bridge. A clean, graphic accent for portrait and fashion work.",
     pricePerDay: 450, images: [U("1611222777277-61319d63ca94"), U("1608539733292-190446b22b83")],
     color: "Black", material: "Acetate", dimensions: "14 cm width", condition: "Like new",
@@ -156,7 +155,7 @@ export const props = [
   },
   {
     id: "fr-012", slug: "tortoiseshell-sunglasses", name: "Tortoiseshell Sunglasses",
-    category: "sunglasses",
+    category: "themed-props",
     description: "Warm tortoiseshell frames with amber lenses. Pairs beautifully with tan and cream palettes.",
     pricePerDay: 500, images: [U("1608539733292-190446b22b83"), U("1559070081-648fb00b2ed1")],
     color: "Tortoiseshell", material: "Acetate", dimensions: "14.5 cm width", condition: "Excellent",
@@ -165,7 +164,7 @@ export const props = [
   },
   {
     id: "fr-013", slug: "sculptural-frame-sunglasses", name: "Sculptural Frame Sunglasses",
-    category: "sunglasses",
+    category: "themed-props",
     description: "Architectural angular frames in a smoky hue. A statement piece for avant-garde editorial styling.",
     pricePerDay: 650, images: [U("1559070081-648fb00b2ed1"), U("1611222777277-61319d63ca94")],
     color: "Smoke", material: "Acetate", dimensions: "15 cm width", condition: "Like new",
@@ -174,7 +173,7 @@ export const props = [
   },
   {
     id: "fr-014", slug: "ivory-strap-heels", name: "Ivory Strappy Heels",
-    category: "shoes",
+    category: "themed-props",
     description: "Delicate ivory strappy heels with a sculpted stiletto. Elegant lines for bridal and fashion campaigns.",
     pricePerDay: 850, images: [U("1535043934128-cf0b28d52f95"), U("1581101767113-1677fc2beaa8")],
     color: "Ivory", material: "Satin & leather", dimensions: "Size 38 EU", condition: "Excellent",
@@ -183,7 +182,7 @@ export const props = [
   },
   {
     id: "fr-015", slug: "sculptural-block-heels", name: "Sculptural Block Heels",
-    category: "shoes",
+    category: "product-shoot",
     description: "Modern block-heel mules with a sculptural silhouette in warm nude. A contemporary accent for still life.",
     pricePerDay: 750, images: [U("1581101767113-1677fc2beaa8"), U("1535043934128-cf0b28d52f95")],
     color: "Nude", material: "Leather", dimensions: "Size 37 EU", condition: "Like new",
@@ -192,7 +191,7 @@ export const props = [
   },
   {
     id: "fr-016", slug: "vintage-hardcover-book-set", name: "Vintage Hardcover Book Set",
-    category: "books",
+    category: "themed-props",
     description: "A stack of cloth-bound vintage hardcovers in muted spines. Perfect for adding height, texture and character to a set.",
     pricePerDay: 550, images: [U("1595123336219-5eedd543bc4a"), U("1546177461-668e7784915e")],
     color: "Mixed neutrals", material: "Cloth-bound paper", dimensions: "Set of 6", condition: "Good, characterful",
@@ -201,7 +200,7 @@ export const props = [
   },
   {
     id: "fr-017", slug: "coffee-table-book-stack", name: "Coffee-Table Book Stack",
-    category: "books",
+    category: "themed-props",
     description: "A curated stack of large-format art and fashion books with clean neutral covers. A staple styling riser.",
     pricePerDay: 600, images: [U("1546177461-668e7784915e"), U("1595123336219-5eedd543bc4a")],
     color: "Cream / Charcoal", material: "Hardcover", dimensions: "Set of 4", condition: "Excellent",
@@ -210,7 +209,7 @@ export const props = [
   },
   {
     id: "fr-018", slug: "ceramic-dinner-set", name: "Handglazed Ceramic Dinner Set",
-    category: "tableware",
+    category: "tableware-serving",
     description: "A speckled stoneware dinner set in warm oatmeal with a reactive glaze. Beautiful for food and lifestyle tablescapes.",
     pricePerDay: 900, images: [U("1740478949628-ff562c3c3923"), U("1610128361323-6e941c97f023")],
     color: "Oatmeal", material: "Glazed stoneware", dimensions: "Service for 4", condition: "Excellent",
@@ -219,7 +218,7 @@ export const props = [
   },
   {
     id: "fr-019", slug: "stoneware-serving-bowls", name: "Stoneware Serving Bowls",
-    category: "tableware",
+    category: "tableware-serving",
     description: "A pair of hand-thrown serving bowls with soft matte glaze. Adds organic warmth to culinary shoots.",
     pricePerDay: 650, images: [U("1610128361323-6e941c97f023"), U("1740478949628-ff562c3c3923")],
     color: "Sand", material: "Stoneware", dimensions: "26 cm diameter", condition: "Like new",
@@ -228,7 +227,7 @@ export const props = [
   },
   {
     id: "fr-020", slug: "vintage-accent-chair", name: "Vintage Accent Chair",
-    category: "furniture",
+    category: "wood-storage",
     description: "A sculptural single-seat accent chair with a slim frame. A striking anchor piece for portrait and interior sets.",
     pricePerDay: 1500, images: [U("1581539250439-c96689b516dd"), U("1772191530787-b9546da02fbc")],
     color: "Charcoal", material: "Wood & upholstery", dimensions: "78 × 60 × 55 cm", condition: "Excellent",
@@ -237,7 +236,7 @@ export const props = [
   },
   {
     id: "fr-021", slug: "cane-side-table", name: "Cane Rattan Side Table",
-    category: "furniture",
+    category: "wood-storage",
     description: "A woven cane side table in natural rattan. Lends warm, tactile character as a styling surface.",
     pricePerDay: 950, images: [U("1762541539540-51495afbb955"), U("1581539250439-c96689b516dd")],
     color: "Natural cane", material: "Rattan & wood", dimensions: "55 × 45 cm", condition: "Excellent",
@@ -246,7 +245,7 @@ export const props = [
   },
   {
     id: "fr-022", slug: "sculptural-ceramic-vase", name: "Sculptural Ceramic Vase",
-    category: "vases",
+    category: "decorative-objects",
     description: "An organically curved ceramic vase in warm bisque. A quiet sculptural hero for minimal still life.",
     pricePerDay: 700, images: [U("1631125915902-d8abe9225ff2"), U("1597696929736-6d13bed8e6a8")],
     color: "Bisque", material: "Ceramic", dimensions: "34 cm tall", condition: "Excellent",
@@ -255,7 +254,7 @@ export const props = [
   },
   {
     id: "fr-023", slug: "ribbed-glass-vase", name: "Ribbed Glass Vase",
-    category: "vases",
+    category: "glassware",
     description: "A fluted, ribbed glass vase that refracts light into soft lines. Elegant with single stems or botanicals.",
     pricePerDay: 550, images: [U("1597696929736-6d13bed8e6a8"), U("1631125915902-d8abe9225ff2")],
     color: "Clear", material: "Ribbed glass", dimensions: "28 cm tall", condition: "Like new",
@@ -264,7 +263,7 @@ export const props = [
   },
   {
     id: "fr-024", slug: "stoneware-bud-vase-trio", name: "Stoneware Bud Vase Trio",
-    category: "vases",
+    category: "decorative-objects",
     description: "A set of three petite bud vases in tonal earth glazes. Charming grouped accents for tablescapes.",
     pricePerDay: 500, images: [U("1631125915902-d8abe9225ff2"), U("1740478949628-ff562c3c3923")],
     color: "Earth tones", material: "Stoneware", dimensions: "12–16 cm", condition: "Excellent",
@@ -273,7 +272,7 @@ export const props = [
   },
   {
     id: "fr-025", slug: "antique-gold-mirror", name: "Antique Gold Mirror",
-    category: "mirrors",
+    category: "decorative-objects",
     description: "An ornate antique gold-framed mirror with a gently aged finish. Adds depth, reflection and old-world glamour to sets.",
     pricePerDay: 1200, images: [U("1612392549386-b6969764af6f"), U("1585033120874-0300a04ded70")],
     color: "Antique gold", material: "Gilt frame, glass", dimensions: "90 × 60 cm", condition: "Good, characterful",
@@ -282,7 +281,7 @@ export const props = [
   },
   {
     id: "fr-026", slug: "round-decorative-mirror", name: "Round Decorative Mirror",
-    category: "mirrors",
+    category: "decorative-objects",
     description: "A slim-framed round mirror in warm brass. Clean and modern for reflective product and portrait compositions.",
     pricePerDay: 800, images: [U("1585033120874-0300a04ded70"), U("1612392549386-b6969764af6f")],
     color: "Brass", material: "Metal frame, glass", dimensions: "70 cm diameter", condition: "Excellent",
@@ -291,7 +290,7 @@ export const props = [
   },
   {
     id: "fr-027", slug: "marble-jewellery-tray", name: "Marble Jewellery Tray",
-    category: "trays",
+    category: "marble-stone",
     description: "A polished marble tray with soft grey veining. An elegant surface for jewellery, fragrance and product close-ups.",
     pricePerDay: 600, images: [U("1634731206404-2a4b1e1120d9"), U("1625746735133-66dccc334545")],
     color: "White marble", material: "Carrara marble", dimensions: "30 × 20 cm", condition: "Excellent",
@@ -300,7 +299,7 @@ export const props = [
   },
   {
     id: "fr-028", slug: "brass-serving-tray", name: "Brass Serving Tray",
-    category: "trays",
+    category: "metal-objects",
     description: "A hammered brass tray with a warm, reflective finish. Grounds flat-lays with a rich metallic tone.",
     pricePerDay: 650, images: [U("1772459125358-e587337c4a92"), U("1747571855541-394b53b3b7e8")],
     color: "Brass", material: "Hammered brass", dimensions: "40 × 28 cm", condition: "Like new",
@@ -309,7 +308,7 @@ export const props = [
   },
   {
     id: "fr-029", slug: "lacquer-styling-tray", name: "Taupe Lacquer Styling Tray",
-    category: "trays",
+    category: "tableware-serving",
     description: "A minimal rectangular lacquer tray in soft taupe. A clean neutral base for building product vignettes.",
     pricePerDay: 500, images: [U("1747571855541-394b53b3b7e8"), U("1772459125358-e587337c4a92")],
     color: "Taupe", material: "Lacquered wood", dimensions: "36 × 24 cm", condition: "Excellent",
@@ -318,7 +317,7 @@ export const props = [
   },
   {
     id: "fr-030", slug: "silk-scarf-drape", name: "Hand-Rolled Silk Scarf",
-    category: "decor",
+    category: "product-shoot",
     description: "A fluid hand-rolled silk scarf in warm ecru. Beautiful as a draped textile accent or soft styling layer.",
     pricePerDay: 450, images: [U("1606259458027-54d2a728b6ab"), U("1617611313649-fbddfaa37b52")],
     color: "Ecru", material: "Mulberry silk", dimensions: "90 × 90 cm", condition: "Like new",
@@ -327,7 +326,7 @@ export const props = [
   },
   {
     id: "fr-031", slug: "woven-decor-object", name: "Sculptural Woven Object",
-    category: "decor",
+    category: "decorative-objects",
     description: "A tactile woven decorative object in natural fibre. Adds organic form and shadow play to minimal compositions.",
     pricePerDay: 500, images: [U("1556893289-5ccc75ebd2bf"), U("1550711147-019468d5350a")],
     color: "Natural", material: "Woven fibre", dimensions: "28 × 22 cm", condition: "Excellent",
@@ -336,7 +335,7 @@ export const props = [
   },
   {
     id: "fr-032", slug: "editorial-still-life-set", name: "Neutral Still-Life Prop Set",
-    category: "decor",
+    category: "product-shoot",
     description: "A curated grouping of tonal objects — sculptural forms, a small vessel and a stone — for instant editorial styling.",
     pricePerDay: 1100, images: [U("1762541539540-51495afbb955"), U("1546177461-668e7784915e")],
     color: "Tonal neutrals", material: "Mixed media", dimensions: "Curated set", condition: "Excellent",
@@ -365,10 +364,17 @@ export const allMaterials = [...new Set(props.map((p) => p.material))].sort();
 // NORMALISED CATALOGUE + FILTER OPTIONS (for the Explore page)
 // ----------------------------------------------------------------------------
 const CAT_MAP = {
-  bags: "Bags", jewellery: "Jewellery", flowers: "Flowers",
-  sunglasses: "Fashion Accessories", shoes: "Shoes", tableware: "Tabletop",
-  books: "Books", furniture: "Furniture", vases: "Decorative Objects",
-  mirrors: "Decorative Objects", trays: "Decorative Objects", decor: "Decorative Objects",
+  "tableware-serving":  "Tableware & Serving",
+  "glassware":          "Glassware & Drinkware",
+  "decorative-objects": "Decorative Objects & Display",
+  "metal-objects":      "Metal Objects",
+  "marble-stone":       "Marble, Stone & Natural Materials",
+  "wood-storage":       "Wood & Storage / Containers",
+  "jewellery-fashion":  "Jewellery & Fashion Display",
+  "themed-props":       "Themed / Special Props",
+  "lighting-candles":   "Lighting & Candle Accessories",
+  "kitchen-culinary":   "Kitchen / Culinary Props",
+  "product-shoot":      "Product Shoot Essentials",
 };
 
 const STYLE_MAP = {
@@ -404,13 +410,13 @@ const deriveColours = (str) => {
 
 // Enriched, filter-ready dataset (all customer pages can use this too).
 export const catalogue = props.map((p) => {
-  const primary = CAT_MAP[p.category] || "Decorative Objects";
+  const primary = CAT_MAP[p.category] || "Decorative Objects & Display";
   const filterCategories = [primary];
-  if (["Books", "Flowers", "Furniture", "Decorative Objects"].includes(primary) && p.shootTypes.includes("Lifestyle")) {
+  if (["Decorative Objects & Display", "Wood & Storage / Containers", "Themed / Special Props"].includes(primary) && p.shootTypes.includes("Lifestyle")) {
     filterCategories.push("Lifestyle");
   }
   const shootTags = new Set(p.shootTypes.map((s) => SHOOT_MAP[s]).filter(Boolean));
-  if (["Tabletop", "Flowers"].includes(primary)) shootTags.add("Food");
+  if (["Tableware & Serving", "Kitchen / Culinary Props"].includes(primary)) shootTags.add("Food");
   return {
     ...p,
     filterCategories,
@@ -423,8 +429,17 @@ export const catalogue = props.map((p) => {
 });
 
 export const filterCategoriesList = [
-  "Bags", "Jewellery", "Flowers", "Fashion Accessories", "Shoes",
-  "Tabletop", "Books", "Furniture", "Decorative Objects", "Lifestyle",
+  "Tableware & Serving",
+  "Glassware & Drinkware",
+  "Decorative Objects & Display",
+  "Metal Objects",
+  "Marble, Stone & Natural Materials",
+  "Wood & Storage / Containers",
+  "Jewellery & Fashion Display",
+  "Themed / Special Props",
+  "Lighting & Candle Accessories",
+  "Kitchen / Culinary Props",
+  "Product Shoot Essentials",
 ];
 
 export const priceBands = [
@@ -495,12 +510,12 @@ export const analytics = {
     { month: "Feb", revenue: 342600 },
   ],
   categoryDemand: [
-    { name: "Vases", value: 22 },
-    { name: "Jewellery", value: 19 },
-    { name: "Flowers", value: 17 },
-    { name: "Trays", value: 14 },
-    { name: "Bags", value: 12 },
-    { name: "Furniture", value: 16 },
+    { name: "Decorative Objects & Display", value: 22 },
+    { name: "Jewellery & Fashion",          value: 19 },
+    { name: "Tableware & Serving",           value: 17 },
+    { name: "Metal Objects",                 value: 14 },
+    { name: "Wood & Storage",                value: 12 },
+    { name: "Product Shoot",                 value: 16 },
   ],
   topProps: [
     { name: "Pearl Statement Necklace", rentals: 61 },

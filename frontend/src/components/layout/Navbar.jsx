@@ -56,8 +56,8 @@ export const Navbar = () => {
             >
               <Menu className="h-5 w-5" />
             </button>
-            <Link to="/" className="font-serif text-2xl tracking-[0.2em] text-foreground sm:text-[1.6rem]">
-              FIRANGI
+            <Link to="/" className="font-serif text-xl tracking-[0.18em] text-foreground sm:text-2xl">
+              STUDIO FRANGIPANI
             </Link>
           </div>
 

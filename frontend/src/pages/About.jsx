@@ -42,7 +42,7 @@ export default function About() {
           </div>
           <div className="flex items-end lg:col-span-5">
             <p className="text-base leading-relaxed text-muted-foreground">
-              Firangi is a curated prop rental studio, created to make professional
+              Studio Frangipani is a curated prop rental studio, created to make professional
               styling pieces accessible to creative teams. It began as a corner of
               a Mumbai studio — a growing collection of objects too beautiful to let
               sit idle between shoots — and grew into a library serving photographers,
@@ -56,7 +56,7 @@ export default function About() {
       <section className="px-5 sm:px-8 lg:px-12">
         <Reveal>
           <div className="relative aspect-[16/9] w-full overflow-hidden">
-            <img src={editorialImages.heroSecondary} alt="Firangi curated arrangement" className="editorial-img h-full w-full object-cover" />
+            <img src={editorialImages.heroSecondary} alt="Studio Frangipani curated arrangement" className="editorial-img h-full w-full object-cover" />
           </div>
         </Reveal>
       </section>
@@ -129,7 +129,7 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="relative aspect-[4/5] overflow-hidden"><img src={editorialImages.studio} alt="Firangi workshop" className="editorial-img h-full w-full object-cover" /></div>
+            <div className="relative aspect-[4/5] overflow-hidden"><img src={editorialImages.studio} alt="Studio Frangipani workshop" className="editorial-img h-full w-full object-cover" /></div>
           </Reveal>
         </div>
       </section>
