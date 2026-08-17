@@ -201,7 +201,7 @@ export default function Home() {
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: (i % 4) * 0.05 }}
                 className={`group relative overflow-hidden ${img.span}`}
               >
-                <img src={img.src} alt="Studio Frangipani styled prop" loading="lazy" className="editorial-img h-full w-full object-cover transition-transform duration-[900ms] ease-editorial group-hover:scale-[1.06]" />
+                <img src={img.src} alt="Studio Frangipani styled prop" loading="lazy" className="editorial-img h-full w-full object-cover transition-transform [transition-duration:900ms] ease-editorial group-hover:scale-[1.06]" />
                 <div className="absolute inset-0 bg-charcoal/0 transition-colors duration-500 group-hover:bg-charcoal/20" />
               </motion.div>
             ))}
